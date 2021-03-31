@@ -20,6 +20,9 @@ const Barra = () => {
                 break;
                 case '/politica-coockies':
                     settextoBarra('Política de Cookies');
+                  break;
+                case '/contacto':
+                    settextoBarra('Contacto');
                 break;
                 default:
                     settextoBarra('');
@@ -27,7 +30,7 @@ const Barra = () => {
             }
         }
         textoDeLaBarra(p);
-    }, []);
+    }, [p]);
     // console.log(p);
   return (
     <Fragment>

@@ -14,6 +14,7 @@ import Resultados from "./components/Resultados";
 import AvisoLegal from "./components/AvisoLegal";
 import PoliticaPrivacidad from "./components/PoliticaPrivacidad";
 import PoliticaCookies from "./components/PoliticaCookies";
+import Contacto from "./components/Contacto";
 
 /*
 imr = import React from 'react';
@@ -30,6 +31,8 @@ const App = () => {
           <Route exact path="/aviso-legal" component={() => <AvisoLegal />} />
           <Route exact path="/politica-privacidad" component={() => <PoliticaPrivacidad />} />
           <Route exact path="/politica-coockies" component={() => <PoliticaCookies />} />
+          <Route exact path="/contacto" component={() => <Contacto />} />
+          <Redirect to="/" />
         </Switch>
         <Footer />
       </Router>
