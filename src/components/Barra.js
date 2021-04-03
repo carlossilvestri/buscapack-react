@@ -1,10 +1,12 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
-
+import Modal1 from "./Modal1";
+import { ModalContext } from "../context/ModalContext";
 const Barra = () => {
   const history = useHistory();
   const p = history.location.pathname;
   const [textoBarra, settextoBarra] = useState("");
+  const { modal, setModal } = useContext(ModalContext);
   let TRNum = `
   <div id="TRNum"></div>
   `;
@@ -34,6 +36,13 @@ const Barra = () => {
     textoDeLaBarra(p);
   }, [p]);
   // console.log(p);
+  const toggleModal = () => {
+    if(modal){
+      setModal(false);
+    }else{
+      setModal(true);
+    }
+  };
   return (
     <Fragment>
       <div>
@@ -52,10 +61,19 @@ const Barra = () => {
               </div>
               <div>
                 <li className="com-breadcrumbs__item">
-                  <div className="alert alert-warning" role="alert" style={{marginBottom: '0px'}}>
-                    ¿Contactar a la empresa de envíos? Te ayudamos da
-                    click
-                    <button type="button" className="btn btn-primary" style={{marginLeft: '10px'}}>
+                  <div
+                    className="alert alert-warning"
+                    role="alert"
+                    style={{ marginBottom: "0px", textAlign: "center",
+                    marginTop: "15px" }}
+                  >
+                    ¿Contactar a la empresa de envíos? Te ayudamos da click
+                    <button
+                      type="button"
+                      onClick={toggleModal}
+                      className="btn btn-primary"
+                      style={{ marginLeft: "10px" }}
+                    >
                       aquí
                     </button>
                   </div>
@@ -64,7 +82,9 @@ const Barra = () => {
             </ol>
           </div>
         </nav>
-        <div dangerouslySetInnerHTML={{__html: TRNum}}></div>
+        <div dangerouslySetInnerHTML={{ __html: TRNum }}></div>
+        {/* Mostrar Modal */}
+        { modal ? ( <Modal1 />) : null }
       </div>
     </Fragment>
   );

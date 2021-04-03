@@ -15,6 +15,7 @@ import AvisoLegal from "./components/AvisoLegal";
 import PoliticaPrivacidad from "./components/PoliticaPrivacidad";
 import PoliticaCookies from "./components/PoliticaCookies";
 import Contacto from "./components/Contacto";
+import ModalProvider from "./context/ModalContext";
 
 /*
 imr = import React from 'react';
@@ -23,19 +24,29 @@ sfc = Stateless Functional Component.
 const App = () => {
   return (
     <Fragment>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={() => <Carrusel />} />
-          <Route exact path="/results" component={() => <Resultados />} />
-          <Route exact path="/aviso-legal" component={() => <AvisoLegal />} />
-          <Route exact path="/politica-privacidad" component={() => <PoliticaPrivacidad />} />
-          <Route exact path="/politica-coockies" component={() => <PoliticaCookies />} />
-          <Route exact path="/contacto" component={() => <Contacto />} />
-          <Redirect to="/" />
-        </Switch>
-        <Footer />
-      </Router>
+      <ModalProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={() => <Carrusel />} />
+            <Route exact path="/results" component={() => <Resultados />} />
+            <Route exact path="/aviso-legal" component={() => <AvisoLegal />} />
+            <Route
+              exact
+              path="/politica-privacidad"
+              component={() => <PoliticaPrivacidad />}
+            />
+            <Route
+              exact
+              path="/politica-coockies"
+              component={() => <PoliticaCookies />}
+            />
+            <Route exact path="/contacto" component={() => <Contacto />} />
+            <Redirect to="/" />
+          </Switch>
+          <Footer />
+        </Router>
+      </ModalProvider>
     </Fragment>
   );
 };

@@ -1,6 +1,6 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment } from "react";
+// import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { css } from "@emotion/react";
 import buscapackFondoBlanco from "../static/img/buscapck-logo-blanco.svg";
 // import axios from "axios";
 
@@ -61,9 +61,6 @@ const Header = () => {
               <img
                 src={buscapackFondoBlanco}
                 alt="buscapck-logo-blanco"
-                css={css`
-                  width: 160px;
-                `}
               />
             </Link>
           </div>
