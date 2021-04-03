@@ -22,7 +22,17 @@
     padding: 0;
     list-style: none
 }
+.com-breadcrumbs__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+}
+@media (max-width: 420px) {
+    .com-breadcrumbs__items{
+        flex-direction: column;
+    }      
+}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
     font-family: sans-serif;
