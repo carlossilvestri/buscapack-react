@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Modal1 from "./Modal1";
 import { ModalContext } from "../context/ModalContext";
+
 const Barra = () => {
   const history = useHistory();
   const p = history.location.pathname;
@@ -33,13 +34,27 @@ const Barra = () => {
           break;
       }
     };
+    const verModal = (p = "") => {
+      let array = p.split("/");
+      let finalPosition = array.length;
+      console.log("finalPosition ", finalPosition);
+      if (finalPosition == 3) {
+        let textoCompany = array[finalPosition - 1];
+        if(textoCompany == "company_name"){
+          return;
+        }
+        setModal(true);
+        console.log("array ", array[finalPosition - 1]);
+      }
+    };
     textoDeLaBarra(p);
+    verModal(p);
   }, [p]);
   // console.log(p);
   const toggleModal = () => {
-    if(modal){
+    if (modal) {
       setModal(false);
-    }else{
+    } else {
       setModal(true);
     }
   };
@@ -64,18 +79,22 @@ const Barra = () => {
                   <div
                     className="alert alert-warning"
                     role="alert"
-                    style={{ marginBottom: "0px", textAlign: "center",
-                    marginTop: "15px" }}
+                    style={{
+                      marginBottom: "0px",
+                      textAlign: "center",
+                      marginTop: "15px",
+                    }}
                   >
                     ¿Contactar a la empresa de envíos? Te ayudamos da click
-                    <button
+                    <Link
                       type="button"
                       onClick={toggleModal}
                       className="btn btn-primary"
+                      to={"/modal/company_name"}
                       style={{ marginLeft: "10px" }}
                     >
                       aquí
-                    </button>
+                    </Link>
                   </div>
                 </li>
               </div>
@@ -84,7 +103,7 @@ const Barra = () => {
         </nav>
         <div dangerouslySetInnerHTML={{ __html: TRNum }}></div>
         {/* Mostrar Modal */}
-        { modal ? ( <Modal1 />) : null }
+        {modal ? <Modal1 /> : null}
       </div>
     </Fragment>
   );
