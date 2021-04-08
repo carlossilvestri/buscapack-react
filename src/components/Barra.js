@@ -35,16 +35,20 @@ const Barra = () => {
       }
     };
     const verModal = (p = "") => {
-      let array = p.split("/");
-      let finalPosition = array.length;
-      console.log("finalPosition ", finalPosition);
-      if (finalPosition == 3) {
-        let textoCompany = array[finalPosition - 1];
-        if(textoCompany == "company_name"){
+      // let array = p.split("/");
+      // let finalPosition = array.length;
+      // console.log("finalPosition ", finalPosition);
+      let arraySearch = history.location.search.split("=");
+      let searchValue = arraySearch[1];
+      // console.log("arraySearch ", arraySearch);
+      if (searchValue) {
+        
+        if(searchValue === "company_name"){
           return;
         }
         setModal(true);
-        console.log("array ", array[finalPosition - 1]);
+        // console.log("searchValue ", searchValue);
+        // console.log("array ", array[finalPosition - 1]);
       }
     };
     textoDeLaBarra(p);
