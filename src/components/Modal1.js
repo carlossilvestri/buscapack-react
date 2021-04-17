@@ -11,7 +11,7 @@ const Modal1 = () => {
   const [imgPorDefecto, setImgPorDefecto] = useState("");
   // Get the router object
   const history = useHistory();
-  const p = history.location.pathname;
+  //const p = history.location.pathname;
   // History
   let arraySearch = history.location.search.split("=");
   let searchValue = arraySearch[1];
@@ -7068,7 +7068,7 @@ const Modal1 = () => {
     }
   };
   const togglePhaseTwo = () => {
-    console.log("Diste click");
+    // console.log("Diste click");
     if (phaseTwo) {
       setphaseTwo(false);
     } else {

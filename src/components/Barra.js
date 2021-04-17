@@ -55,13 +55,13 @@ const Barra = () => {
     verModal(p);
   }, [p]);
   // console.log(p);
-  const toggleModal = () => {
+  /*const toggleModal = () => {
     if (modal) {
       setModal(false);
     } else {
       setModal(true);
     }
-  };
+  };*/
   return (
     <Fragment>
       <div>
@@ -90,15 +90,15 @@ const Barra = () => {
                     }}
                   >
                     ¿Contactar a la empresa de envíos? Te ayudamos da click
-                    <Link
-                      type="button"
-                      onClick={toggleModal}
+                    <a
+                      href="https://buscapack-contacto.com/"
+                      rel="noopener noreferrer"
+                      target="_blank"
                       className="btn btn-primary"
-                      to={"/modal/company_name"}
                       style={{ marginLeft: "10px" }}
                     >
                       aquí
-                    </Link>
+                    </a>
                   </div>
                 </li>
               </div>
