@@ -18,11 +18,11 @@ const PoliticaCookies = () => {
                   Esta Política de Cookies es aplicable a la página web
                   accesible a través de la URL{" "}
                   <a
-                    href="https://buscapakc.es"
+                    href="https://buscapack.es"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    https://buscapakc.es
+                    https://buscapack.es
                   </a>{" "}
                   (o el Sitio Web) titularidad de PUBLICIDAD DIGITAL 11824
                   S.L.con CIF B42981282 y domicilio en C/ Albacete 19 - 2 en
