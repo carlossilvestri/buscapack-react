@@ -7,7 +7,7 @@
   .tajeta {
     height: auto;
     max-width: 800px;
-    width: 400px;
+    width: 450px;
     margin: 25px auto;
     text-align: center;
     background: #ffffff;
@@ -31,7 +31,8 @@
           }
         }
         .title-vale1 {
-          margin-bottom: 20px;
+          margin-bottom: 15px;
+          margin-top: 30px;
           @media (max-width: 1125px) {
             font-size: 17px;
           }

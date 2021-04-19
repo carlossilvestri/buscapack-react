@@ -43,6 +43,7 @@ const App = () => {
             />
             <Route exact path="/contacto" component={() => <Contacto />} />
             <Route exact path="/modal/:company_name" component={() => <Carrusel />} />
+            <Route exact path="/:company_name" component={() => <Carrusel />} />
             <Redirect to="/" />
           </Switch>
           <Footer />

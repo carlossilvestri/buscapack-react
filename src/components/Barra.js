@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Modal1 from "./Modal1";
 import { ModalContext } from "../context/ModalContext";
+import companiesJson from "../jsons/track-companies.json";
 
 const Barra = () => {
   const history = useHistory();
@@ -35,20 +36,33 @@ const Barra = () => {
       }
     };
     const verModal = (p = "") => {
+      // v2
+      let arraySearch = p.split("/");
+      let searchValue = arraySearch[1];
       // let array = p.split("/");
       // let finalPosition = array.length;
       // console.log("finalPosition ", finalPosition);
-      let arraySearch = history.location.search.split("=");
-      let searchValue = arraySearch[1];
+      // let arraySearch = history.location.search.split("=");
+      // let searchValue = arraySearch[1];
       // console.log("arraySearch ", arraySearch);
+      console.log("searchValue ", searchValue);
+      console.log("companiesJson ", companiesJson);
       if (searchValue) {
-        
-        if(searchValue === "company_name"){
-          return;
+        for (let i = 0; i < companiesJson.length; i++) {
+          if (companiesJson[i].courier_code === searchValue) {
+            // console.log("Encontrada ");
+            setModal(true);
+            return;
+            // console.log("imgPorDefecto ", imgPorDefecto);
+          }
         }
-        setModal(true);
-        // console.log("searchValue ", searchValue);
-        // console.log("array ", array[finalPosition - 1]);
+        // No se encontro
+        setModal(false);
+        // console.log("textoCompany ", textoCompany);
+        // console.log("imgPorDefecto ", imgPorDefecto);
+      }else{
+        // No se coloco nada se esta en  /
+        setModal(false);
       }
     };
     textoDeLaBarra(p);
