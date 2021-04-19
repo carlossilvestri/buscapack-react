@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 // Estilos
-import "../static/styles/results.scss";
+import "../static/styles/results.css";
 // Imagenes
 import tlfImg from "../static/img/icons/tlf.svg";
 import checkedImg from "../static/img/icons/checked.svg";

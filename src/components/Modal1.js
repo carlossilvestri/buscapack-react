@@ -1,6 +1,6 @@
 import React, { Fragment, useContext, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import "../static/styles/modal.scss"; // Styles of the Modal
+import "../static/styles/modal.css"; // Styles of the Modal
 import xButton from "../static/img/buttons/button-x.svg";
 import { ModalContext } from "../context/ModalContext";
 import buscaPackLogoNaranja from "../static/img/buscapck-logo-naranja.svg";

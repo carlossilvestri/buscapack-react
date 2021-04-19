@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 // import { css } from "@emotion/react";
 import styled from '@emotion/styled';
 // Estilos
-import "../static/styles/utilidades.scss";
+import "../static/styles/utilidades.css";
 import "../static/styles/carrusel.css";
 // Imagenes
 import upsLogo from "../static/img/carrusel/ups-logo.jpg";
