@@ -7,21 +7,20 @@ import buscaPackLogoNaranja from "../static/img/buscapck-logo-naranja.svg";
 import companiesJson from "../jsons/track-companies.json";
 
 const Modal1 = () => {
+  // Activa o desactiva el modal.
   const { modal, setModal } = useContext(ModalContext);
+  // Fases
+  const [phaseOne, setphaseOne] = useState(false);
   const [phaseTwo, setphaseTwo] = useState(false);
+  const [phaseThree, setphaseThree] = useState(false);
+  // Variables a usar en el Pop Up.
   const [nombreCompany, setNombreCompany] = useState("");
-  const [companyCode, setCompanyCode] = useState("");
+  // const [companyCode, setCompanyCode] = useState("");
   const [imgPorDefecto, setImgPorDefecto] = useState("");
   // Get the router object
   const history = useHistory();
   const p = history.location.pathname;
-  // History
-  /*
-  // v1
-  let arraySearch = history.location.search.split("=");
-  let searchValue = arraySearch[1];
-  */
-  // v2
+  // History - Router
   let arraySearch = p.split("/");
   let searchValue = arraySearch[1];
 
@@ -38,11 +37,13 @@ const Modal1 = () => {
         for (let i = 0; i < companiesJson.length; i++) {
           if (companiesJson[i].courier_code === searchValue) {
             // console.log("Encontrada ");
-            setCompanyCode(searchValue);
+            // setCompanyCode(searchValue);
             setNombreCompany(companiesJson[i].courier_name);
             setModal(true);
             setImgPorDefecto(companiesJson[i].courier_logo);
-            setphaseTwo(true);
+            setphaseOne(true);
+            setphaseTwo(false);
+            setphaseThree(false);
             return;
             // console.log("imgPorDefecto ", imgPorDefecto);
           }
@@ -65,14 +66,43 @@ const Modal1 = () => {
       setModal(true);
     }
   };
+  const togglePhaseOne = () => {
+    // console.log("Diste click");
+    if (phaseTwo) {
+      setphaseTwo(false);
+      setphaseThree(false);
+      setphaseOne(false);
+    } else {
+      setphaseTwo(false);
+      setphaseThree(false);
+      setphaseOne(true);
+    }
+  };
   const togglePhaseTwo = () => {
     // console.log("Diste click");
     if (phaseTwo) {
       setphaseTwo(false);
+      setphaseThree(false);
+      setphaseOne(false);
     } else {
       setphaseTwo(true);
+      setphaseThree(false);
+      setphaseOne(false);
     }
   };
+  // Permite mostrar el boton de llamar
+  const togglePhaseThree = () => {
+      // console.log("Diste click. Dentro de togglePhaseThree");
+      if (phaseThree) {
+        setphaseThree(false);
+        setphaseTwo(false);
+        setphaseOne(false);
+      } else {
+        setphaseThree(true);
+        setphaseTwo(false);
+        setphaseOne(false);
+      }
+    };
   return (
     <Fragment>
       <div>
@@ -82,7 +112,7 @@ const Modal1 = () => {
               <div className="flex-elemts">
                 <div className="cont-btn-salir">
                   {phaseTwo ? <div></div> : null}
-                  {/* {phaseTwo ? (
+                  {phaseThree? (
                     <button
                       type="button"
                       className="btn btn-default animate__animated animate__fadeIn"
@@ -94,12 +124,12 @@ const Modal1 = () => {
                         aria-hidden="true"
                       ></span>
                     </button>
-                  ) : null} */}
+                  ) : null} 
                   <img src={xButton} alt="X button" onClick={toggleModal} />
                 </div>
-                {!phaseTwo ? (
+                {phaseTwo ? (
                   <h3 className="title-vale1 animate__animated animate__fadeIn">
-                    ¿Necesitas?
+                    ¿Qué necesita?
                   </h3>
                 ) : null}
                 {phaseTwo && imgPorDefecto.length === 0 ? (
@@ -110,39 +140,48 @@ const Modal1 = () => {
                     alt="buscapck-logo-blanco"
                   />
                 ) : null}
-                {!phaseTwo ? (
+                {phaseTwo ? (
                   <button
                     className="btn-vale-dashboard1 animate__animated animate__fadeIn"
                     style={{ width: "200px" }}
-                    onClick={togglePhaseTwo}
+                    onClick={togglePhaseThree}
+                  >
+                    Localizar un envío
+                  </button>
+                ) : null}
+                {phaseTwo ? (
+                  <button
+                    className="btn-vale-dashboard1 animate__animated animate__fadeIn"
+                    style={{ width: "200px" }}
+                    onClick={togglePhaseThree}
                   >
                     Hablar con un agente
                   </button>
                 ) : null}
-                {!phaseTwo ? (
+                {phaseTwo ? (
                   <button
                     className="btn-vale-dashboard1 animate__animated animate__fadeIn"
                     style={{ width: "200px" }}
-                    onClick={togglePhaseTwo}
+                    onClick={togglePhaseThree}
                   >
                     Solicitar asistencia
                   </button>
                 ) : null}
-                {!phaseTwo ? (
+                {phaseTwo ? (
                   <button
                     className="btn-vale-dashboard1 animate__animated animate__fadeIn"
                     style={{ width: "200px" }}
-                    onClick={togglePhaseTwo}
+                    onClick={togglePhaseThree}
                   >
                     Otro
                   </button>
                 ) : null}
-                {phaseTwo ? (
+                {phaseOne ? (
                   <h3 className="title-vale1 animate__animated animate__fadeIn">
                     ¿Es usted cliente de {nombreCompany}?
                   </h3>
                 ) : null}
-                {phaseTwo && imgPorDefecto.length > 0 ? (
+                {phaseOne && imgPorDefecto.length > 0 ? (
                   <img
                     src={imgPorDefecto}
                     className="animate__animated animate__fadeIn"
@@ -150,26 +189,26 @@ const Modal1 = () => {
                     alt="img-company-from-db"
                   />
                 ) : null}
-                {phaseTwo ? (
-                  <a
-                    href={`https://buscapack-contacto.com/${companyCode}`}
+                {phaseOne ? (
+                  <button
+                    onClick={togglePhaseTwo}
                     className="btn-vale-dashboard1 animate__animated animate__fadeIn"
                     style={{ width: "200px", textDecoration: "none" }}
                   >
                     Sí
-                  </a>
+                  </button>
                 ) : null}
-                {phaseTwo ? (
-                  <a
-                    href={`https://buscapack-contacto.com/${companyCode}`}
+                {phaseOne ? (
+                  <button
+                    onClick={togglePhaseTwo}
                     className="btn-vale-dashboard1 animate__animated animate__fadeIn"
                     style={{ width: "200px", textDecoration: "none" }}
                   >
                     No
-                  </a>
+                  </button>
                 ) : null}
 
-                {phaseTwo ? (
+                {phaseOne ? (
                   <span className="text-descriptivo animate__animated animate__fadeIn">
                     {/* Publicidad de servicio de teléfonos de información de
                     abonados,llamando le facilitamos el teléfono de la compañía
@@ -179,6 +218,54 @@ const Modal1 = () => {
                     prestado por 11824 servicio informacion telefonica, S.L. */}
                   </span>
                 ) : null}
+                {/* Start Fase 3. */}
+                {phaseThree ? (
+                  <h3 className="title-vale1 animate__animated animate__fadeIn" style={{ fontSize: '28px' }}>
+                    Información recogida, pulse para ser atendido.
+                  </h3>
+                ) : null}
+                {/* Start Img de la compania. */}
+                {phaseThree && imgPorDefecto.length > 0 ? (
+                  <img
+                    src={imgPorDefecto}
+                    className="animate__animated animate__fadeIn"
+                    style={{ marginBottom: "10px", maxWidth: "210px" }}
+                    alt="img-company-from-db"
+                  />
+                ) : null}
+                {/* Fin Img de la compania. */}
+                {/* Start Img lo de buscapack naranja (Cuando no hay img de la compania). */}
+                {phaseThree && imgPorDefecto.length === 0 ? (
+                  <img
+                    src="/static/img/buscapck-logo-naranja.svg"
+                    className="animate__animated animate__fadeIn"
+                    style={{ marginBottom: "10px" }}
+                    alt="buscapck-logo-blanco"
+                  />
+                ) : null}
+                {/* Fin Img lo de buscapck naranja (Cuando no hay img de la compania). */}
+                {phaseThree ? (
+                  <a
+                    href="tel:11824"
+                    className="btn-vale-dashboard1 animate__animated animate__fadeIn"
+                    role="button"
+                    style={{ width: "200px", textDecoration: "none" }}
+                  >
+                    Llamar ahora
+                  </a>
+                ) : null}
+
+                {phaseThree ? (
+                  <span className="text-descriptivo animate__animated animate__fadeIn">
+                    Publicidad de servicio de teléfonos de información de
+                    abonados,llamando le facilitamos el teléfono de la compañía
+                    y/o le ponemos en contacto con ella, el precio máximo por
+                    minuto tres euros y dos céntimos, impuestos incluidos.
+                    Duración máxima de la llamada diez minutos. Servicio
+                    prestado por 11824 servicio informacion telefonica, S.L.
+                  </span>
+                ) : null}
+                {/* Fin Fase 3. */}
               </div>
             </div>
           </div>
