@@ -257,12 +257,12 @@ const Modal1 = () => {
 
                 {phaseThree ? (
                   <span className="text-descriptivo animate__animated animate__fadeIn">
-                    Publicidad de servicio de teléfonos de información de
+                    {/* Publicidad de servicio de teléfonos de información de
                     abonados,llamando le facilitamos el teléfono de la compañía
                     y/o le ponemos en contacto con ella, el precio máximo por
                     minuto tres euros y dos céntimos, impuestos incluidos.
                     Duración máxima de la llamada diez minutos. Servicio
-                    prestado por 11824 servicio informacion telefonica, S.L.
+                    prestado por 11824 servicio informacion telefonica, S.L. */}
                   </span>
                 ) : null}
                 {/* Fin Fase 3. */}
