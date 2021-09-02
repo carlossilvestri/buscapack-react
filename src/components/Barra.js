@@ -39,21 +39,14 @@ const Barra = () => {
       // v2
       let arraySearch = p.split("/");
       let searchValue = arraySearch[1];
-      // let array = p.split("/");
-      // let finalPosition = array.length;
-      // console.log("finalPosition ", finalPosition);
-      // let arraySearch = history.location.search.split("=");
-      // let searchValue = arraySearch[1];
-      // console.log("arraySearch ", arraySearch);
+
       console.log("searchValue ", searchValue);
       console.log("companiesJson ", companiesJson);
       if (searchValue) {
         for (let i = 0; i < companiesJson.length; i++) {
           if (companiesJson[i].courier_code === searchValue) {
-            // console.log("Encontrada ");
             setModal(true);
             return;
-            // console.log("imgPorDefecto ", imgPorDefecto);
           }
         }
         // No se encontro

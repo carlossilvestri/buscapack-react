@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 // import { Link } from "react-router-dom";
-import Barra from "./Barra";
+import Barra from "../components/Barra";
 
 const PoliticaCookies = () => {
   return (

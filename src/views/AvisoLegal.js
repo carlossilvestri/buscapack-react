@@ -1,10 +1,7 @@
 import React, { Fragment } from "react";
-// import { Link } from "react-router-dom";
-import Barra from "./Barra";
 
-/*
- <p className="com-cub__text"></p>
-*/
+import Barra from "../components/Barra";
+
 const AvisoLegal = () => {
   return (
     <Fragment>
@@ -388,7 +385,3 @@ const AvisoLegal = () => {
 };
 
 export default AvisoLegal;
-
-/*
- <p className="com-cub__text"></p>
-*/

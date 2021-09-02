@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 // import { Link } from "react-router-dom";
-import Barra from "./Barra";
+import Barra from "../components/Barra";
 
 const PoliticaPrivacidad = () => {
   return (
@@ -137,13 +137,3 @@ const PoliticaPrivacidad = () => {
 };
 
 export default PoliticaPrivacidad;
-
-/*
-            <div className="com-cub__wrapper">
-              <h2 className="com-cub__title">Política de Privacidad</h2>
-            </div>            
-            <div className="com-cub__wrapper">
-              <p className="com-cub__text">
-              </p>
-            </div>
-*/

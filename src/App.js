@@ -11,11 +11,12 @@ import Carrusel from "./components/Carrusel";
 import Footer from "./components/Footer";
 import "./static/styles/responsive.pack.css"; // General Styles of the React App.
 import Resultados from "./components/Resultados";
-import AvisoLegal from "./components/AvisoLegal";
-import PoliticaPrivacidad from "./components/PoliticaPrivacidad";
-import PoliticaCookies from "./components/PoliticaCookies";
+import AvisoLegal from "./views/AvisoLegal";
+import PoliticaPrivacidad from "./views/PoliticaPrivacidad";
+import PoliticaCookies from "./views/PoliticaCookies";
 import Contacto from "./components/Contacto";
 import ModalProvider from "./context/ModalContext";
+import EmpresasTransporteInfo from "./views/EmpresasTransporteInfo";
 
 /*
 imr = import React from 'react';
@@ -42,6 +43,7 @@ const App = () => {
               component={() => <PoliticaCookies />}
             />
             <Route exact path="/contacto" component={() => <Contacto />} />
+            <Route exact path="/empresas-de-transporte" component={() => <EmpresasTransporteInfo />} />
             <Route exact path="/modal/:company_name" component={() => <Carrusel />} />
             <Route exact path="/:company_name" component={() => <Carrusel />} />
             <Redirect to="/" />

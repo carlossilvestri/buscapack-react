@@ -1,0 +1,12 @@
+/* ALGUNOS ESTILOS DE LAS EMPRESAS DE TRANSPORTE */
+.img-empresa{
+    @media (min-width: 800px) {
+        float: left;
+        margin-right: 15px;
+        max-width: 281px;   
+    }
+    @media (max-width: 799px) {
+        text-align: center;
+        width: 100%;
+    }
+}

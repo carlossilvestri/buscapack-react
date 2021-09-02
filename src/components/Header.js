@@ -68,14 +68,12 @@ const Header = () => {
             <button type="button" className="com-header__menu-toggle"></button>
             <ul className="com-header__menu-items">
               <li className="com-header__menu-item">
-                <a
+                <Link to={"/empresas-de-transporte"}
                   className="com-header__menu-item-link"
                   href="https://www.trackingmore.com/carriers.html"
-                  rel="noopener noreferrer"
-                  target="_blank"
                 >
                   Empresas de transporte
-                </a>
+                </Link>
               </li>
               <li className="com-header__menu-item com-header__menu-item--help">
                 <Link className="com-header__menu-item-link" to={"/contacto"}>
