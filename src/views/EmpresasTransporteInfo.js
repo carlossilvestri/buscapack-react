@@ -3,8 +3,11 @@ import Barra from "../components/Barra";
 import DHL from "../components/empresas-de-transporte/Dhl";
 import Envalia from "../components/empresas-de-transporte/Envalia";
 import Gls from "../components/empresas-de-transporte/Gls";
+import CorreosExpress from "../components/empresas-de-transporte/CorreosExpress";
+import Seur from "../components/empresas-de-transporte/Seur";
 // Estilos.
 import "../static/styles/empresasTransporteInfo.scss";
+import Correos from "../components/empresas-de-transporte/Correos";
 
 const EmpresasTransporteInfo = () => {
   return (
@@ -17,6 +20,9 @@ const EmpresasTransporteInfo = () => {
               EMPRESAS DE TRANSPORTE
             </h2>
           </div>
+          <Correos/>
+          <Seur/>
+          <CorreosExpress/>
           <Gls/>
           <Envalia />
           <DHL />

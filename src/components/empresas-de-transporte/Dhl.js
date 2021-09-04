@@ -7,7 +7,7 @@ const DHL = () => {
       <article className="com-cub animate__animated animate__fadeIn">
           <div>
             <div className="com-cub__wrapper">
-              <h2 className="com-cub__title">DHL</h2>
+              <h2 className="com-cub__title color-active">DHL</h2>
             </div>
             <div className="com-cub__wrapper">
               <p className="com-cub__text">

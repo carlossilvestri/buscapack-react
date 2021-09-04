@@ -8,7 +8,7 @@ const Envalia = () => {
         <div>
           <div>
             <div className="com-cub__wrapper">
-              <h2 className="com-cub__title">ENVIALIA</h2>
+              <h2 className="com-cub__title color-active">ENVIALIA</h2>
             </div>
             <div className="com-cub__wrapper">
               <p className="com-cub__text">

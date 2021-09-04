@@ -51,7 +51,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="com-footer__legal-terms">
-            © 2021 buscapack.es - Todos los derechos reservados.
+            © 2021 buscapack.com - Todos los derechos reservados.
             {/* <br/> */}
             <div className="com-footer__legal-links">
               <div className="com-footer__legal-link">

@@ -25,11 +25,11 @@ const AvisoLegal = () => {
                   tomo 10953 del archivo, libro número 8231, es titular del
                   Sitio Web accesible a través de la URL:{" "}
                   <a
-                    href="https://buscapack.es"
+                    href="https://buscapack.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    https://buscapack.es{" "}
+                    https://buscapack.com{" "}
                   </a>
                   (en adelante, la Plataforma o el Sitio Web, indistintamente).
                 </span>

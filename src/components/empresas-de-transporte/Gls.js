@@ -8,7 +8,7 @@ const Gls = () => {
         <div>
           <div>
             <div className="com-cub__wrapper">
-              <h2 className="com-cub__title">GLS</h2>
+              <h2 className="com-cub__title color-active">GLS</h2>
             </div>
             <div className="com-cub__wrapper">
               <p className="com-cub__text">

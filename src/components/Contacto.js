@@ -17,11 +17,11 @@ const Contacto = () => {
                 <span className="texto12TeXGyreAdventorRegularGris">
                 PUBLICIDAD DIGITAL 11824 S.L. con NIF B42981282 y domicilio en C/ Albacete 19 -2 de Valencia, inscrita en el Registro Mercantil de Valencia con el numero 2021/412 de protocolo, asiento 725 del Diario 954 con inscripción 1ª de la hoja V-197080, al folio 115 del tomo 10953 del archivo, libro numero 8231 es titular del Sitio Web accesible a través de la URL{" "}
                   <a
-                    href="https://buscapack.es"
+                    href="https://buscapack.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    https://buscapack.es
+                    https://buscapack.com
                   </a>{" "}
                   (en adelante, la Plataforma o el Sitio Web u 11824, indistintamente).
                 </span>
