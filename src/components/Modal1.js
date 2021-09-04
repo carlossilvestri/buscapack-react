@@ -15,6 +15,7 @@ const Modal1 = () => {
   const [phaseThree, setphaseThree] = useState(false);
   // Variables a usar en el Pop Up.
   const [nombreCompany, setNombreCompany] = useState("");
+  const [tlfCompany, setTlfCompany] = useState("");
   // const [companyCode, setCompanyCode] = useState("");
   const [imgPorDefecto, setImgPorDefecto] = useState("");
   // Get the router object
@@ -39,6 +40,7 @@ const Modal1 = () => {
             // console.log("Encontrada ");
             // setCompanyCode(searchValue);
             setNombreCompany(companiesJson[i].courier_name);
+            setTlfCompany(companiesJson[i].courier_phone);
             setModal(true);
             setImgPorDefecto(companiesJson[i].courier_logo);
             setphaseOne(true);
@@ -246,7 +248,7 @@ const Modal1 = () => {
                 {/* Fin Img lo de buscapck naranja (Cuando no hay img de la compania). */}
                 {phaseThree ? (
                   <a
-                    href="tel:11824"
+                    href={`tel:${tlfCompany}`}
                     className="btn-vale-dashboard1 animate__animated animate__fadeIn"
                     role="button"
                     style={{ width: "200px", textDecoration: "none" }}

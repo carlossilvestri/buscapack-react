@@ -18,13 +18,13 @@
     "courier_logo": "https://envios.es/img/empresas-transporte/correos/logo-correos.jpg"
   },
   {
-    "courier_name": "Envalia",
-    "courier_code": "envalia",
-    "courier_type": "envalia",
+    "courier_name": "Envialia",
+    "courier_code": "envialia",
+    "courier_type": "envialia",
     "courier_phone": "919891116",
     "country_code": "ES",
-    "courier_url": "https://www.correosexpress.com/",
-    "courier_logo": "https://enviotodo.pe/wp-content/uploads/2020/02/logo_correos_express.png"
+    "courier_url": "https://www.envialia.com/",
+    "courier_logo": "https://novologistica.com/wp-content/uploads/2018/06/envialialogo.jpg"
   },
   {
     "courier_name": "Seur",
