@@ -25,7 +25,7 @@ const PoliticaPrivacidad = () => {
                   2021/412 de protocolo, asiento 725 del Diario 954 con
                   inscripción 1ª de la hoja V-197080, al folio 115 del tomo
                   10953 del archivo, libro numero 8231 es titular del Sitio Web
-                  accesible a través de la URL https://buscapack.com (en
+                  accesible a través de la URL https://busca-pack.com (en
                   adelante, la Plataforma o el Sitio Web u 11824,
                   indistintamente).
                 </span>
@@ -79,7 +79,7 @@ const PoliticaPrivacidad = () => {
                 tratamiento, haciendo ejercicio de los derechos de acceso,
                 rectificación, supresión, portabilidad, oposición y limitación
                 al tratamiento, poniéndolo en conocimiento de 11824 a través de
-                un correo electrónico dirigido a info@buscapack.com o indicándolo
+                un correo electrónico dirigido a info@busca-pack.com o indicándolo
                 a la dirección arriba indicada, señalando como asunto
                 “Protección de Datos”. En alguna ocasión especial, cuando
                 tengamos dudas sobre la identidad del Usuario, le podremos
