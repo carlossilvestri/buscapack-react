@@ -3,7 +3,25 @@
     "courier_name": "Correos Express",
     "courier_code": "correos-express",
     "courier_type": "correos-express",
-    "courier_phone": null,
+    "courier_phone": "919891114",
+    "country_code": "ES",
+    "courier_url": "https://www.correosexpress.com/",
+    "courier_logo": "https://enviotodo.pe/wp-content/uploads/2020/02/logo_correos_express.png"
+  },
+  {
+    "courier_name": "Correos",
+    "courier_code": "correos",
+    "courier_type": "correos",
+    "courier_phone": "919891113",
+    "country_code": "ES",
+    "courier_url": "https://www.correos.com/grupo-correos/",
+    "courier_logo": "https://envios.es/img/empresas-transporte/correos/logo-correos.jpg"
+  },
+  {
+    "courier_name": "Envalia",
+    "courier_code": "envalia",
+    "courier_type": "envalia",
+    "courier_phone": "919891116",
     "country_code": "ES",
     "courier_url": "https://www.correosexpress.com/",
     "courier_logo": "https://enviotodo.pe/wp-content/uploads/2020/02/logo_correos_express.png"
@@ -12,7 +30,7 @@
     "courier_name": "Seur",
     "courier_code": "seur",
     "courier_type": "seur",
-    "courier_phone": null,
+    "courier_phone": "919891112",
     "country_code": "ES",
     "courier_url": "https://www.seur.com/es/index.html",
     "courier_logo": "https://www.paxinasgalegas.es/imagenes/punto-de-servicio-seur-servico_img552298t0.jpg"
@@ -21,7 +39,7 @@
     "courier_name": "DHL Express",
     "courier_code": "dhl",
     "courier_type": "express",
-    "courier_phone": null,
+    "courier_phone": "919891115",
     "country_code": "DE",
     "courier_url": "http://www.dhl.com/en/express/tracking.html?brand=DHL&AWB=******",
     "courier_logo": "//s.trackingmore.com/images/icons/express/dhl.png"
@@ -30,7 +48,7 @@
     "courier_name": "UPS",
     "courier_code": "ups",
     "courier_type": "express",
-    "courier_phone": "+1 800 742 5877",
+    "courier_phone": "919891120",
     "country_code": "US",
     "courier_url": "https://www.ups.com/track?loc=en_US&tracknum=******&requester=WT/",
     "courier_logo": "//s.trackingmore.com/images/icons/express/ups.png"
@@ -2154,7 +2172,7 @@
     "courier_name": "gls-pl",
     "courier_code": "gls-pl",
     "courier_type": "express",
-    "courier_phone": null,
+    "courier_phone": "919891117",
     "country_code": "PL",
     "courier_url": null,
     "courier_logo": "//s.trackingmore.com/images/icons/express/gls-pl.png"
@@ -2208,7 +2226,7 @@
     "courier_name": "Envialia",
     "courier_code": "envialia",
     "courier_type": "express",
-    "courier_phone": "+34 902400909",
+    "courier_phone": "919891114",
     "country_code": "ES",
     "courier_url": "http://www.envialia.com/tracking/",
     "courier_logo": "//s.trackingmore.com/images/icons/express/envialia.png"
@@ -3702,7 +3720,7 @@
     "courier_name": "GLS",
     "courier_code": "gls",
     "courier_type": "express",
-    "courier_phone": "44 247 621 3455",
+    "courier_phone": "919891114",
     "country_code": null,
     "courier_url": "https://gls-group.eu/EU/en/parcel-tracking?match=******",
     "courier_logo": "//s.trackingmore.com/images/icons/express/gls.png"
@@ -4125,7 +4143,7 @@
     "courier_name": "Amazon Logistics",
     "courier_code": "amazon",
     "courier_type": "express",
-    "courier_phone": null,
+    "courier_phone": "919891123",
     "country_code": "US",
     "courier_url": null,
     "courier_logo": "//s.trackingmore.com/images/icons/express/amazon.png"
@@ -4539,7 +4557,7 @@
     "courier_name": "Zeleris",
     "courier_code": "zeleris",
     "courier_type": "express",
-    "courier_phone": "+34 91 707 4001",
+    "courier_phone": "919891122",
     "country_code": null,
     "courier_url": "https://www.zeleris.com/seguimiento_envio.aspx",
     "courier_logo": "//s.trackingmore.com/images/icons/express/zeleris.png"
@@ -6267,7 +6285,7 @@
     "courier_name": "TIPSA",
     "courier_code": "tip-sa",
     "courier_type": "express",
-    "courier_phone": "902 10 10 47",
+    "courier_phone": "919891119",
     "country_code": "ES",
     "courier_url": null,
     "courier_logo": "//s.trackingmore.com/images/icons/express/tip-sa.png"
