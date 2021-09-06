@@ -30,6 +30,9 @@ const Barra = () => {
         case "/contacto":
           settextoBarra("Contacto");
           break;
+        case "/empresas-de-transporte":
+            settextoBarra("Empresas de Transporte");
+          break;
         default:
           settextoBarra("");
           break;
@@ -86,7 +89,19 @@ const Barra = () => {
                 </li>
               </div>
               <div>
-                <li className="com-breadcrumbs__item">
+                <ul className="enlace">
+                  <li>
+                  <Link to={"/empresas-de-transporte"}>
+                    <span itemProp="name">Empresas de Transporte</span>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to={"/contacto"}>
+                    <span itemProp="name">Contacto</span>
+                  </Link>
+                  </li>
+                </ul>
+                {/* <li className="com-breadcrumbs__item">
                   <div
                     className="alert alert-warning"
                     role="alert"
@@ -107,7 +122,7 @@ const Barra = () => {
                       aquí
                     </a>
                   </div>
-                </li>
+                </li> */}
               </div>
             </ol>
           </div>

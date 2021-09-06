@@ -1,60 +1,84 @@
 @import "./variables";
-body{
-    font-family: $main-font;
+body {
+  font-family: $main-font;
 }
-.title-1{
-    font-family: $main-font;
-    font-weight: bold;
-    color: #FF5F00;
-    margin: 20px;
-    font-size: 35px;
-    text-align: center;
-    @media (max-width: 420px) {
-        font-size: 25px;
+.title-1 {
+  font-family: $main-font;
+  font-weight: bold;
+  color: #ff5f00;
+  margin: 20px;
+  font-size: 35px;
+  text-align: center;
+  @media (max-width: 420px) {
+    font-size: 25px;
+  }
+}
+.subtitle-photos {
+  font-family: $main-font;
+  font-weight: normal;
+  color: #ff5f00;
+}
+.p-light {
+  font-family: $main-font;
+  font-weight: normal;
+  color: #867b7b;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.bg-pendding {
+  background-color: $color-pendding !important;
+}
+.bg-notfound {
+  background-color: $color-notfound !important;
+}
+.bg-transit {
+  background-color: $color-transit !important;
+}
+.bg-pickup {
+  background-color: $color-pickup !important;
+}
+.bg-delivered {
+  background-color: $color-delivered !important;
+}
+.bg-expired {
+  background-color: $color-expired !important;
+}
+.bg-undelivered {
+  background-color: $color-undelivered !important;
+}
+.bg-exception {
+  background-color: $color-exception !important;
+}
+.color-active {
+  color: $color-orange !important;
+}
+
+.enlace {
+  color: #6d6d6d;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.21429;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  padding: 0;
+  @media (min-width: 1025px) {
+    display: none;
+  }
+  li {
+    &:hover {
+      cursor: pointer;
+      color: $color-orange;
     }
-}
-.subtitle-photos{
-    font-family: $main-font;
-    font-weight: normal;
-    color: #FF5F00;
-}
-.p-light{
-    font-family: $main-font;
-    font-weight: normal;
-    color: #867B7B;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-ul{
-    margin: 0;
-    padding: 0;
-}
-.bg-pendding{
-    background-color: $color-pendding !important;
-}
-.bg-notfound{
-    background-color: $color-notfound!important;
-}
-.bg-transit{
-    background-color: $color-transit!important;
-}
-.bg-pickup{
-    background-color: $color-pickup!important;
-}
-.bg-delivered{
-    background-color: $color-delivered!important;
-}
-.bg-expired{
-    background-color: $color-expired!important;
-}
-.bg-undelivered{
-    background-color: $color-undelivered!important;
-}
-.bg-exception{
-    background-color: $color-exception!important;
-}
-.color-active{
-    color: $color-orange !important;
+    margin-top: 5px;
+    list-style: none;
+  }
 }

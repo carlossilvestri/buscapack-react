@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { css } from "@emotion/react";
 
@@ -6,6 +6,15 @@ import { css } from "@emotion/react";
 import buscaPackLogoNaranja from "../static/img/buscapck-logo-naranja.svg";
 
 const Footer = () => {
+  const [anio, setAnio] = useState("");
+  // Funcion
+  const getYear = () => {
+    const year = new Date().getYear() + 1900;
+    return year;
+  }
+  useEffect(() => {  
+    setAnio(getYear);
+  }, [anio]);
   return (
     <Fragment>
       <footer className="com-footer">
@@ -51,7 +60,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className="com-footer__legal-terms">
-            © 2021 busca-pack.com - Todos los derechos reservados.
+            © { `${anio} `} busca-pack.com - Todos los derechos reservados.
             {/* <br/> */}
             <div className="com-footer__legal-links">
               <div className="com-footer__legal-link">
